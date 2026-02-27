@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INSPIRING WORDS — คำที่ช่วยให้อยู่กับวันพรุ่งนี้ได้</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@300;400;600&family=Noto+Sans+Thai:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1510;
+    --cream: #f5f0e8;
+    --warm: #c8a96e;
+    --muted: #8a7d6e;
+    --soft: #e8e0d0;
+    --accent: #7a4f35;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'Noto Sans Thai', sans-serif;
+    min-height: 100vh;
+  }
+
+  /* HEADER */
+  .header {
+    text-align: center;
+    padding: 80px 40px 60px;
+    border-bottom: 1px solid var(--soft);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(200,169,110,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .header-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--warm);
+    margin-bottom: 20px;
+  }
+
+  .header h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(28px, 5vw, 52px);
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--ink);
+    margin-bottom: 12px;
+  }
+
+  .header h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .header-sub {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 14px;
+    color: var(--muted);
+    font-weight: 300;
+    margin-top: 10px;
+  }
+
+  .header-line {
+    width: 60px;
+    height: 1px;
+    background: var(--warm);
+    margin: 30px auto 0;
+  }
+
+  /* INTRO */
+  .intro {
+    border-bottom: 1px solid var(--soft);
+    padding: 60px 40px;
+    background: #faf7f2;
+  }
+
+  .intro-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .intro-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--warm);
+    margin-bottom: 14px;
+  }
+
+  .intro-jp {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    font-style: italic;
+    color: var(--accent);
+    margin-bottom: 28px;
+    opacity: 0.85;
+  }
+
+  .intro-body p {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 15px;
+    line-height: 2.1;
+    color: #4a4035;
+    font-weight: 300;
+    margin-bottom: 18px;
+  }
+
+  .intro-body p:last-child { margin-bottom: 0; }
+
+  /* FILTER */
+  .filter-bar {
+    display: flex;
+    gap: 10px;
+    padding: 30px 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-bottom: 1px solid var(--soft);
+  }
+
+  .filter-btn {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    border: 1px solid var(--soft);
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.25s;
+  }
+
+  .filter-btn:hover, .filter-btn.active {
+    background: var(--ink);
+    color: var(--cream);
+    border-color: var(--ink);
+  }
+
+  /* GRID */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 2px;
+    padding: 2px;
+  }
+
+  /* CARD */
+  .card {
+    background: var(--cream);
+    padding: 48px 40px;
+    border: 1px solid var(--soft);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 340px;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 0;
+    background: var(--warm);
+    transition: height 0.4s ease;
+  }
+
+  .card:hover::before { height: 100%; }
+
+  .card:hover {
+    background: #fffef9;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(26,21,16,0.08);
+    z-index: 2;
+  }
+
+  .card-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--warm);
+    margin-bottom: 24px;
+  }
+
+  .card-quote {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 17px;
+    line-height: 1.85;
+    font-weight: 400;
+    color: var(--ink);
+    flex: 1;
+    margin-bottom: 28px;
+  }
+
+  .card-quote-mark {
+    font-family: 'DM Serif Display', serif;
+    font-size: 60px;
+    line-height: 0;
+    vertical-align: -20px;
+    color: var(--warm);
+    opacity: 0.6;
+    margin-right: 4px;
+  }
+
+  .card-divider {
+    width: 30px;
+    height: 1px;
+    background: var(--warm);
+    margin-bottom: 20px;
+    opacity: 0.5;
+  }
+
+  .card-description {
+    font-size: 12.5px;
+    line-height: 1.8;
+    color: var(--muted);
+    margin-bottom: 24px;
+    font-weight: 300;
+    display: none;
+  }
+
+  .card.expanded .card-description {
+    display: block;
+    animation: fadeIn 0.3s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .card-speaker {
+    margin-top: auto;
+  }
+
+  .speaker-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    color: var(--ink);
+  }
+
+  .speaker-role {
+    font-size: 11px;
+    color: var(--warm);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 3px;
+  }
+
+  .source-tag {
+    font-size: 10.5px;
+    color: var(--muted);
+    margin-top: 12px;
+    font-style: italic;
+    border-top: 1px solid var(--soft);
+    padding-top: 12px;
+  }
+
+  .expand-hint {
+    position: absolute;
+    bottom: 16px;
+    right: 20px;
+    font-size: 10px;
+    color: var(--warm);
+    letter-spacing: 0.15em;
+    opacity: 0;
+    transition: opacity 0.25s;
+    font-family: 'Cormorant Garamond', serif;
+    text-transform: uppercase;
+  }
+
+  .card:hover .expand-hint { opacity: 1; }
+  .card.expanded .expand-hint { opacity: 1; content: '▲ ย่อ'; }
+
+  .card-tag {
+    display: inline-block;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border: 1px solid var(--soft);
+    color: var(--muted);
+    margin-bottom: 16px;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  /* PART SECTION HEADERS */
+  .section-header {
+    grid-column: 1 / -1;
+    padding: 40px 40px 20px;
+    border-bottom: 1px solid var(--soft);
+    margin-bottom: 0;
+  }
+
+  .section-header h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--ink);
+  }
+
+  .section-header p {
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-family: 'Cormorant Garamond', serif;
+    margin-top: 6px;
+  }
+
+  /* MODAL */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(26,21,16,0.75);
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+  }
+
+  .modal-overlay.open { display: flex; }
+
+  .modal {
+    background: var(--cream);
+    max-width: 600px;
+    width: 100%;
+    padding: 60px;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: modalIn 0.3s ease;
+  }
+
+  @keyframes modalIn {
+    from { opacity: 0; transform: scale(0.96) translateY(10px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 24px; right: 28px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: var(--muted);
+    font-family: 'Cormorant Garamond', serif;
+    line-height: 1;
+  }
+
+  .modal-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    letter-spacing: 0.4em;
+    color: var(--warm);
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  .modal-quote {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 20px;
+    line-height: 2;
+    margin-bottom: 36px;
+    color: var(--ink);
+    border-left: 2px solid var(--warm);
+    padding-left: 24px;
+  }
+
+  .modal-desc {
+    font-size: 14px;
+    line-height: 1.9;
+    color: #5a5040;
+    margin-bottom: 30px;
+    font-weight: 300;
+  }
+
+  .modal-speaker-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 18px;
+  }
+
+  .modal-speaker-role {
+    font-size: 12px;
+    color: var(--warm);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-family: 'Cormorant Garamond', serif;
+    margin-top: 4px;
+  }
+
+  .modal-source {
+    font-size: 11.5px;
+    color: var(--muted);
+    margin-top: 20px;
+    border-top: 1px solid var(--soft);
+    padding-top: 20px;
+    font-style: italic;
+    line-height: 1.7;
+  }
+
+  .modal-original {
+    font-size: 12px;
+    color: var(--muted);
+    font-family: 'Cormorant Garamond', serif;
+    margin-top: 16px;
+    font-style: italic;
+  }
+
+  .modal-jp {
+    font-size: 15px;
+    color: var(--accent);
+    line-height: 1.9;
+    margin-bottom: 20px;
+    letter-spacing: 0.05em;
+    border-left: 2px solid var(--warm);
+    padding-left: 16px;
+    opacity: 0.85;
+  }
+
+  /* SCROLL TO TOP */
+  .scroll-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 44px;
+    height: 44px;
+    background: var(--ink);
+    color: var(--cream);
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .scroll-top.visible { display: flex; }
+
+  .count-label {
+    text-align: center;
+    padding: 16px;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--muted);
+    font-family: 'Cormorant Garamond', serif;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--soft);
+  }
+
+  @media (max-width: 600px) {
+    .grid { grid-template-columns: 1fr; }
+    .card { padding: 36px 28px; min-height: 280px; }
+    .modal { padding: 40px 28px; }
+    .filter-bar { padding: 20px 28px; }
+    .header { padding: 60px 28px 50px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-label">® Premium Special Issue</div>
+  <h1>INSPIRING<br><em>WORDS</em></h1>
+  <div class="header-sub">明日を生きるための言葉 · คำที่ช่วยให้อยู่กับวันพรุ่งนี้ได้</div>
+  <div class="header-line"></div>
+</div>
+
+<div class="intro">
+  <div class="intro-inner">
+    <div class="intro-label">[ บทนำ ]</div>
+    <div class="intro-jp">明日を生きるための言葉。</div>
+    <div class="intro-body">
+      <p>ลองนึกดูว่าในหนึ่งวัน เราผ่านคำกี่คำ บนฟีด บนหน้าจอ บนป้ายรถเมล์ มันเยอะมากจนสมองเริ่มกรองออกโดยอัตโนมัติ และนั่นแหละที่น่ากลัว เพราะบางครั้งคำที่ดีก็ถูกกรองออกไปด้วย</p>
+      <p>มีอยู่ช่วงหนึ่งที่เราอยากได้ยินแค่ประโยคเดียว ประโยคที่ตรงไปที่หัวใจพอดี ไม่ต้องอธิบายมาก ไม่ต้องมีหัวข้อ แค่รู้สึกว่า "ใช่ — แบบนี้แหละที่ฉันรู้สึกอยู่"</p>
+      <p>®Premium ฉบับนี้จึงเดินไปหาคนที่ทำงานอยู่กับคำ กับภาพ กับอาหาร กับร่างกายมนุษย์ แล้วถามว่า "มีประโยคอะไรบ้างที่ยังติดอยู่ในหัวคุณ?" คำตอบทั้ง 23 ชุดที่ได้มา ไม่มีชุดไหนเหมือนกัน แต่ทุกชุดพูดถึงสิ่งเดียวกัน — ว่าชีวิตนั้นมีค่าพอที่จะอยู่กับมันต่อไป</p>
+    </div>
+  </div>
+</div>
+
+<div class="filter-bar">
+  <button class="filter-btn active" onclick="filterCards('all', this)">ทั้งหมด</button>
+  <button class="filter-btn" onclick="filterCards('part1', this)">Part 1 — My Favorite Quote</button>
+  <button class="filter-btn" onclick="filterCards('part2', this)">Part 2 — Best Essayist</button>
+  <button class="filter-btn" onclick="filterCards('part3', this)">Part 3 — Essays for Life</button>
+</div>
+
+<div class="count-label" id="countLabel">แสดง 36 คำ</div>
+
+<div class="grid" id="grid"></div>
+
+<!-- Modal -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+  <div class="modal" id="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-number" id="m-number"></div>
+    <div class="modal-jp" id="m-jp"></div>
+    <div class="modal-quote" id="m-quote"></div>
+    <div class="modal-desc" id="m-desc"></div>
+    <div>
+      <div class="modal-speaker-name" id="m-name"></div>
+      <div class="modal-speaker-role" id="m-role"></div>
+    </div>
+    <div class="modal-original" id="m-original"></div>
+    <div class="modal-source" id="m-source"></div>
+  </div>
+</div>
+
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+const quotes = [
+  // PART 1
+  {
+    part: 'part1',
+    num: '01',
+    tag: 'ช่างภาพ',
+    quote: 'แสงไม่ใช่อนุภาค ไม่ใช่คลื่น แสงก็คือแสง — แค่นั้นเอง',
+    original: '光は粒子でも波でもなく、光は光そのもの',
+    speaker: 'Rinko Kawauchi',
+    speakerTh: 'ริงโกะ คาวาอุจิ',
+    role: 'ช่างภาพ',
+    desc: 'มีอยู่วันหนึ่งที่ฉันถ่ายภาพแล้วรู้สึกว่าตัวเองกำลังพยายาม "อธิบาย" สิ่งที่เห็น แต่มันไม่ยอมให้อธิบาย ประโยคนี้เตือนฉันว่า บางสิ่งมีอยู่โดยไม่ต้องการนิยาม — ฉันไม่ได้จับมันไว้ ฉันแค่อยู่ตรงนั้นพร้อมกับมัน',
+    source: 'จาก 《女性は宇宙に最初にとって》 โดย 西条八束'
+  },
+  {
+    part: 'part1',
+    num: '02',
+    tag: 'นักเขียน',
+    quote: 'ใจดีอย่างเดียวยังไม่พอ ถ้าไม่รู้จริง ก็ยังทำร้ายกันได้อยู่ดี',
+    original: '良心ではなく知識',
+    speaker: 'Ota Stephanie Kanto',
+    speakerTh: 'โอตะ สเตฟาเนีย กันโตะ',
+    role: 'นักเขียน',
+    desc: 'นักสังคมวิทยาบอกว่า "คนใจดีก็เลือกปฏิบัติได้" ตอนแรกฟังแล้วรู้สึกว่าตัวเองคงไม่ใช่แบบนั้น แต่ยิ่งคิดก็ยิ่งเข้าใจว่า ความตั้งใจดีไม่ใช่เกราะกำบัง ถ้าเราไม่มีความรู้เป็นฐาน ความดีในใจอาจพาเราทำสิ่งที่ผิดได้โดยไม่รู้ตัว',
+    source: 'จาก 《森を泳ぐ》 (ちくま新書)'
+  },
+  {
+    part: 'part1',
+    num: '03',
+    tag: 'คิวเรเตอร์',
+    quote: 'ทุกคนบนโลกนี้มีความสามารถพอที่จะมองสิ่งเดิมด้วยสายตาใหม่ — ถ้าเพียงแต่ยอมให้ตัวเองลองดูสักครั้ง',
+    original: '地球上のすべての人間は、視点を変え、共感を発動し、まったく同じものを何通りもの方法で理解する力を持っている。自分自身にそれを許すならば。',
+    speaker: 'Shinobu Nomura',
+    speakerTh: 'ชิโนบุ โนมุระ',
+    role: 'คิวเรเตอร์อาวุโส · Tokyo Opera City Art Gallery',
+    desc: 'ทุกครั้งที่ฉันรู้สึกว่าตัวเองมองโลกคับแคบลงไป ประโยคนี้ดึงฉันกลับมา ไม่ใช่เพราะมันบอกให้เราพยายาม แต่เพราะมันบอกว่าความสามารถนั้นมีอยู่แล้ว เราแค่ต้อง "ยอมให้ตัวเองใช้มัน"',
+    source: 'จาก คาตาล็อกนิทรรศการ 《ライアン・ガンダーが選ぶ収蔵品展》 (2021)'
+  },
+  {
+    part: 'part1',
+    num: '04',
+    tag: 'สถาปนิก',
+    quote: 'วันที่เราหยุดรักธรรมชาติ ธรรมชาติก็หยุดบอกความจริงให้เราฟัง',
+    original: '自然を見る眼が親愛の情を失へば、相手も決してその本性を明かさないものである。',
+    speaker: 'Momoko Kudo',
+    speakerTh: 'โมโมโกะ คุโดะ',
+    role: 'สถาปนิก',
+    desc: 'ฉันเก็บโปสการ์ดใบนี้มาจากนิทรรศการในปี 2017 วางไว้บนโต๊ะทำงานมาตลอด เพราะมันพูดถึงสิ่งที่การออกแบบสถาปัตยกรรมต้องการมากที่สุด — ถ้าเราเข้าหางานด้วยความรัก มันจะเปิดตัวเองให้เราเห็น ถ้าเราเข้าหาด้วยความเย็นชา มันก็แค่ปิดประตูรอ',
+    source: 'จาก 《積分宇宙の世界》 โดย 中谷文二'
+  },
+  {
+    part: 'part1',
+    num: '05',
+    tag: 'นักวางแผน',
+    quote: 'ฟินแลนด์ไม่ใช่สวรรค์ และไม่ใช่นรก มันแค่เลือกวิธีอยู่อีกแบบหนึ่ง และนั่นก็เป็นสิทธิ์ที่เราทุกคนมีเหมือนกัน',
+    original: 'フィンランドは理想郷でもないし、とんでもなくひどいところでもない。単に違うだけだ。',
+    speaker: 'Yoshiaki Nishimura',
+    speakerTh: 'โยชิอากิ นิชิมูระ',
+    role: 'Planning Director / นักเขียน',
+    desc: 'ประโยคสั้นๆ นี้หยุดฉันไว้ได้ทันที เพราะมันบอกว่าไม่ต้องเปรียบเทียบ ไม่ต้องตัดสิน แค่ยอมรับว่าความต่างนั้นมีอยู่จริง และมันก็โอเค แหล่งที่มาของคุณค่าในชีวิตไม่มีสูตรสำเร็จ',
+    source: 'จาก 《ヘルシンキ 生活の練習》 (筑摩書房) โดย 朴沙羅'
+  },
+  {
+    part: 'part1',
+    num: '06',
+    tag: 'บรรณาธิการ',
+    quote: 'มองตรงนี้สิ สิ่งที่ฉันเห็นอยู่ มันสวยมาก',
+    original: 'おれが見ているものの美しさを見ろ',
+    speaker: 'Akiko Wakana',
+    speakerTh: 'อากิโกะ วาคานะ',
+    role: 'บรรณาธิการ / นักเขียน',
+    desc: 'สิ่งที่ฉันทำในทุกงานคือการชี้ไปที่ความงามที่เห็นแล้วบอกว่า "มาดูตรงนี้ด้วยกันไหม?" — งานที่ดีสำหรับฉันคือสิ่งที่ทำให้คนอื่นมองเห็นในแบบที่ฉันเห็น โดยที่ไม่ต้องรู้สึกว่าฉันอยู่ในนั้นด้วย',
+    source: 'อ้างอิงจากงานของ 大島真吾'
+  },
+  {
+    part: 'part1',
+    num: '07',
+    tag: 'พิธีกรวิทยุ',
+    quote: 'ฟังคนอื่นอย่างจริงจัง นั่นคือทุกอย่างของมานุษยวิทยา และของชีวิตด้วย',
+    original: '他者を真剣に受け取ることが、私の言わんとする人類学の第一の原則である。',
+    speaker: 'Yukino Nagai',
+    speakerTh: 'ยูกิโนะ นาไง',
+    role: 'พิธีกรวิทยุ J-WAVE / นักเขียน',
+    desc: 'ตอนทำงานภาคสนามในอินเดีย ฉันไม่เข้าใจสิ่งที่คนพูดอยู่นานมาก แต่ประโยคของ Tim Ingold สอนว่า ความไม่เข้าใจไม่ใช่ความล้มเหลว แต่คือสัญญาณว่าเราเริ่มฟังจริงแล้ว',
+    source: 'จาก 《人類学とは何か》 โดย Tim Ingold แปลโดย 奥野克巳'
+  },
+  {
+    part: 'part1',
+    num: '08',
+    tag: 'นักเขียน',
+    quote: 'ปีนทุกภูเขา ว่ายทุกทะเล ตามทุกสายรุ้งจนกว่าจะพบความฝัน',
+    original: 'Climb Ev\'ry Mountain すべての山に登れ',
+    speaker: 'Noriko Morishita',
+    speakerTh: 'โนริโกะ โมริชิตะ',
+    role: 'นักเขียน / เอสเซอิสต์',
+    desc: 'ฉันรู้จักเพลงนี้จาก The Sound of Music ตั้งแต่เด็ก และฟังซ้ำมาจนอายุห้าสิบกว่า เพลงนี้ไม่ได้บอกว่าชีวิตง่าย มันบอกว่ายาก แต่สิ่งที่ต้องทำคือเดินต่อ — ทุกครั้งที่ฟัง แทนที่จะรู้สึกหนัก กลับรู้สึกอยากลุกขึ้น',
+    source: 'จาก 《The Sound of Music》 (1959) เพลงโดย Rodgers & Hammerstein'
+  },
+  {
+    part: 'part1',
+    num: '09',
+    tag: 'นักออกแบบ',
+    quote: 'ความสมบูรณ์แบบนั้นสวยงาม แต่ก็โง่เขลาในแบบของมันเองด้วย',
+    original: '完璧は美しいが同時にまぬけである',
+    speaker: 'Yoko Yasunishi',
+    speakerTh: 'โยโกะ ยาซูนิชิ',
+    role: 'Designer / Creative Director',
+    desc: 'บรูโน มูนารีพูดสิ่งนี้ไว้ และมันตบหน้าฉันทุกครั้งที่เริ่มยึดติดกับความสมบูรณ์แบบ งานดีไซน์ที่ดีต้องมีรอยมนุษย์อยู่ในนั้น มีช่องว่างให้คนอื่นเข้ามาเติม ถ้ามันสมบูรณ์เกินไป คนก็แค่มองผ่านโดยไม่รู้สึกอะไร',
+    source: 'จาก 《ムナーリのことば》 โดย Bruno Munari แปลโดย 阿部雅世'
+  },
+  {
+    part: 'part1',
+    num: '10',
+    tag: 'ผู้กำกับภาพยนตร์',
+    quote: 'ภาพยนตร์ที่ดีจะทำให้เรารู้สึกเหมือนวันที่ออกไปเล่นน้ำในลำธารกับเพื่อน แล้วได้รู้สึกถึงความอ่อนโยนของร่มเงาใบไม้ไปพร้อมกัน',
+    original: 'よい映画とはまさにそれ、友達と一緒に川遊びに出て、友達と一緒に受けた葉蔭の愛撫に他ならない。',
+    speaker: 'Sho Miyake',
+    speakerTh: 'โชะ มิยาเกะ',
+    role: 'ผู้กำกับภาพยนตร์',
+    desc: 'สิ่งที่ประทับใจมากที่สุดคือความรู้สึกเมื่อลมพัดผ่าน — ภาพยนตร์ที่ดีมีความรู้สึกแบบนั้น มันไม่ได้แค่ "แสดงให้เห็น" แต่มันทำให้ผู้ชมรู้สึกถึงลมพร้อมกัน',
+    source: 'จาก 《ジャン・ルノワール》 โดย Jean Renoir แปลโดย 西本晃二'
+  },
+  {
+    part: 'part1',
+    num: '11',
+    tag: 'สไตลิสต์',
+    quote: 'ทุกอย่างอาจถูกแย่งไปได้ แต่วิธีที่เราตอบสนองต่อสิ่งที่เกิดขึ้น ยังคงเป็นของเราเสมอ',
+    original: 'たったひとつ、あたえられた環境でいかにふるまうかという、人間としての最後の自由だけは奪えない',
+    speaker: 'Tomomi Nagayama',
+    speakerTh: 'โตโมมิ นากายามะ',
+    role: 'Interior Stylist',
+    desc: 'วิกเตอร์ ฟร็องค์ล เขียนสิ่งนี้ขึ้นมาจากประสบการณ์ในค่ายกักกัน พอกลับมาอ่านตอนสามสิบกว่าปีก็รู้สึกหนักแน่นกว่ามาก มันไม่ได้บอกให้เราสู้ มันบอกว่าสิ่งที่เราเลือกได้เสมอคือ "ท่าทีของเราเอง"',
+    source: 'จาก 《夜と霧》 โดย Viktor Frankl แปลโดย 池田香代子'
+  },
+  {
+    part: 'part1',
+    num: '12',
+    tag: 'Food Creator',
+    quote: 'ตัดออก ตัดออก แล้วก็ตัดออกอีก ถ้ากระดูกที่เหลืออยู่ยังส่องแสงได้ ก็แค่นั้นพอแล้ว',
+    original: '削ぎ落とすんだよ。削ぎ落として、削ぎ落として、残った骨だけがほおっと光っていればそれでいいんだ。',
+    speaker: 'Mayu Sanda',
+    speakerTh: 'มายุ ซันดะ',
+    role: 'Food Creator / ช่างทำขนมปัง',
+    desc: 'ตอนที่ยังเป็นนักเรียนศิลปะ ฉันได้ยินประโยคนี้แล้วรู้สึกอะไรบางอย่างขยับในอก มันไม่ได้บอกให้เราสร้างมากขึ้น แต่บอกให้เราตัดออก — ถ้าตัดทุกอย่างที่ไม่จำเป็นออก สิ่งที่เหลืออยู่ยังดีพอไหม?',
+    source: 'จาก 《ゴリラの日 日常》 (小学館) โดย 大西洋'
+  },
+  {
+    part: 'part1',
+    num: '13',
+    tag: 'นักเขียน',
+    quote: 'นั่นเป็นเหตุที่ฉันยังพูด ยังพูด และพูดซ้ำต่อไปเรื่อย ๆ วิธีเดียวที่จะหยุดโลกนี้ไม่ให้กลายเป็นนรก คือไม่ยอมเงียบ',
+    original: 'だからぼくはしつこく言い続ける。世界の地獄化を、声を止める唯一の方法は、声を上げ続けることだ。',
+    speaker: 'Daniel Takeda',
+    speakerTh: 'แดเนียล ทาเคดะ',
+    role: 'นักเขียน / นักวิจัย',
+    desc: 'ฉันเห็นคนจำนวนมากในโซเชียลที่เริ่มเงียบลง ไม่ใช่เพราะไม่มีอะไรจะพูด แต่เพราะกลัวถูกโจมตี ประโยคนี้เตือนฉันว่าความเงียบไม่เคยเป็นทางออก',
+    source: 'จาก 《止められた音楽を止める》 (講談社)'
+  },
+  {
+    part: 'part1',
+    num: '14',
+    tag: 'นักมานุษยวิทยา',
+    quote: 'ตอนท้ายของงานภาคสนามที่ยาวนานจนแทบหมดกำลัง ธรรมชาติก็หันมายิ้มให้โดยไม่มีการบอกล่วงหน้า',
+    original: 'うんざりするほど長いフィールドワークの末に、自然が観察者にほほえみかけてくれた瞬間',
+    speaker: 'Juichi Yamagiwa',
+    speakerTh: 'จุยจิ ยามากิวะ',
+    role: 'นักมานุษยวิทยา / นักไพรเมตวิทยา',
+    desc: 'มีอยู่ขณะหนึ่งที่กอริลลาที่ฉันศึกษามาหลายปีจู่ ๆ ก็หันมามองและส่งยิ้มให้ มันเหมือนกับว่าธรรมชาติตัดสินใจว่า "โอเค ตอนนี้ฉันไว้ใจคุณแล้ว" — ขณะนั้นมันคุ้มค่ากับทุกอย่างที่ผ่านมา',
+    source: 'จาก 《自然はなぜ美しいか》 (平凡社) โดย 伊谷純一郎'
+  },
+  {
+    part: 'part1',
+    num: '15',
+    tag: 'ศิลปิน',
+    quote: 'หิมะก็คือจดหมายจากฟ้า',
+    original: '雪は天からの手紙',
+    speaker: 'AKI INOMATA',
+    speakerTh: 'อากิ อิโนมาตะ',
+    role: 'ศิลปินร่วมสมัย',
+    desc: 'การที่นักวิทยาศาสตร์คนหนึ่งมองหิมะแต่ละเกล็ดว่าเป็น "จดหมาย" มันบอกว่าวิทยาศาสตร์กับบทกวีไม่ได้ห่างกันเลย ฉันพยายามทำสิ่งเดียวกันในงานศิลปะของฉัน',
+    source: 'จาก 《雪の芸術展》 โดย 中谷宇吉郎'
+  },
+  {
+    part: 'part1',
+    num: '16',
+    tag: 'กราฟิกดีไซเนอร์',
+    quote: 'ฉันแค่หวังว่ามันจะผ่านไปได้ ในที่สุด',
+    original: 'I hope it\'s gonna be alright',
+    speaker: 'Hiromi Asakura',
+    speakerTh: 'ฮิโรมิ อาซาคุระ',
+    role: 'Graphic Designer',
+    desc: 'เพลงนี้ของ Pet Shop Boys ออกมาตั้งปี 1988 และพูดถึงสงคราม แต่ทุกครั้งที่ฟังในวันที่หนักมากสำหรับฉันเอง คำว่า "alright" กลับรู้สึกเหมือนมีคนมาบอกว่า "ไม่เป็นไร มันจะผ่านไปได้"',
+    source: 'จาก 《It\'s Alright》 โดย Pet Shop Boys'
+  },
+  {
+    part: 'part1',
+    num: '17',
+    tag: 'สำนักพิมพ์',
+    quote: 'คำที่ตัวเองต้องการจริง ๆ มีอยู่แล้วในตัวเรา แค่บางทีเราลืมมันไปเอง',
+    original: '自分がほんとうに必要としている言葉は自分が書き得るはずだ。必要な言葉は忘れているのではないだろうか。',
+    speaker: 'Yusuke Nakaoka',
+    speakerTh: 'ยูสุเกะ นาคาโอกะ',
+    role: 'ผู้บริหารสำนักพิมพ์ Misharinsha',
+    desc: 'ฉันทำสำนักพิมพ์เล็ก ๆ ที่ช่วยให้คนเขียนหนังสือของตัวเอง ประโยคนี้เปลี่ยนวิธีที่ฉันมองงานไปเลย — แทนที่จะมองหาคำจากที่อื่น ลองมองข้างในก่อนไหม? บางทีเราไม่ได้ขาดคำ แค่ลืมไปว่าตัวเองมีอยู่',
+    source: 'จาก 《本を贈る》 สำนักพิมพ์ 三輪舎'
+  },
+  {
+    part: 'part1',
+    num: '18',
+    tag: 'แพทย์',
+    quote: 'ตอนที่ถึงวาระสุดท้าย สิ่งที่จะถูกถามถึงคงไม่ใช่ตำแหน่งหรือรางวัล แต่เป็นว่าเราเป็นมนุษย์ที่ดีแค่ไหน',
+    original: '死んだ時に問われるのは、その人の人間性だと僕は思います。',
+    speaker: 'Toshiro Inaba',
+    speakerTh: 'โทชิโระ อินาบะ',
+    role: 'แพทย์ / นักคิด',
+    desc: 'ยามที่ฉันรู้สึกหลงทาง ฉันมักเปิดงานของโยโกโอะ ทาดาโนริ ภาพของเขาพูดถึงความตายโดยที่ไม่ทำให้มันน่ากลัว มันทำให้ฉันนึกถึงว่าอยู่อย่างไรต่างหากที่สำคัญ',
+    source: 'จาก 《横尾忠則 死、ぬん?》 (ポプラ社)'
+  },
+  {
+    part: 'part1',
+    num: '19',
+    tag: 'โปรดิวเซอร์',
+    quote: 'การอยู่คนเดียวนี่มันเหมือนยาเสพติดเลยนะ',
+    original: '独身は麻薬！',
+    speaker: 'Rina Sobue',
+    speakerTh: 'รินะ โซบุเอะ',
+    role: 'โปรดิวเซอร์ TV Tokyo',
+    desc: 'ฉันอยากสร้างงานที่ทำให้ผู้หญิงทุกคนรู้สึกว่าชีวิตที่เลือกเอง ไม่ว่าจะแบบไหน ก็มีค่าพอ ๆ กัน',
+    source: 'จาก 《私がプロポーズできない101の理由》 โดย Janice Yuen'
+  },
+  {
+    part: 'part1',
+    num: '20',
+    tag: 'นักออกแบบ',
+    quote: 'ใช่ ฉันหาเงินจากงานที่ทำ แต่ไม่เคยทำมันเพราะเงินสักครั้ง ฉันทำเพราะมันทำให้มีความสุข — แค่นั้นเอง',
+    original: 'たしかに私は小説で金を稼いでいる。だが、金のためにと思って文字を書いたことは一度もない。私が書くのは悦びのためだ。',
+    speaker: 'Mariko Mikuni',
+    speakerTh: 'มาริโกะ มิคุนิ',
+    role: 'Knit Designer',
+    desc: 'สตีเวน คิงพูดสิ่งนี้ไว้ใน On Writing และมันเป็นคำที่ฉันอยากให้ตัวเองจำไว้ตลอด ไม่ว่าจะทำอะไร ถ้าทำเพราะอยากทำจริง ๆ มันจะออกมาต่างกัน',
+    source: 'จาก 《書くことについて》 โดย Stephen King แปลโดย 田村義進'
+  },
+  {
+    part: 'part1',
+    num: '21',
+    tag: 'แร็ปเปอร์',
+    quote: 'ของที่ซื้อได้จากร้านสะดวกซื้อก็พอ ยังสร้างบางอย่างที่ไม่เหมือนใครได้อยู่ดี เงินก็เหมือนกัน',
+    original: '全部コンビニエンス・ストアで買えるものの中から自分の人と違うものを作り上げることができるんだよ',
+    speaker: 'Utamaru',
+    speakerTh: 'อุตามารุ',
+    role: 'แร็ปเปอร์ / พิธีกรวิทยุ · Rhymester',
+    desc: 'ฮิปฮอปสอนฉันว่าความคิดสร้างสรรค์ไม่ได้ขึ้นอยู่กับงบประมาณ แต่ขึ้นอยู่กับมุมมองและวิธีที่เราใช้สิ่งที่มีอยู่ — ทุกครั้งที่รู้สึกว่าตัวเองไม่มีพอ',
+    source: 'จาก 《ミュージック・マガジン》 1987年1月号'
+  },
+  {
+    part: 'part1',
+    num: '22',
+    tag: 'นักชีววิทยา',
+    quote: 'มีปลาตัวหนึ่งชื่อ "กัปปี้" — ชื่อร่าเริงดีออก',
+    original: 'グッピーという陽気な名前の魚がいる。',
+    speaker: 'Toshitaka Suzuki',
+    speakerTh: 'โทชิทากะ ซูซูกิ',
+    role: 'นักชีววิทยา · มหาวิทยาลัยโตเกียว',
+    desc: 'ซากุระโมโมโกะเริ่มเรื่องด้วยประโยคนี้แล้วค่อย ๆ พาเราไปสู่โลกที่ไม่คาดคิด เธอสอนฉันว่าการค้นพบที่ยิ่งใหญ่เริ่มจากคำถามเล็กมาก ๆ',
+    source: 'จาก 《さくらももこ エッセイ集》'
+  },
+  {
+    part: 'part1',
+    num: '23',
+    tag: 'Copywriter',
+    quote: 'ยังหนุ่มยังสาวอยู่เสมอ วันแรกของทุกสิ่ง',
+    original: 'Forever Young はじまりの日',
+    speaker: 'Mika Kunii',
+    speakerTh: 'มิกะ คุนิอิ',
+    role: 'Copywriter',
+    desc: 'Bob Dylan เขียนเพลงนี้ให้ลูกชาย แต่คำแปลภาษาญี่ปุ่นที่ว่า "はじまりの日" (วันแรก) สะดุดใจฉันมากกว่า ตอนที่ฉันตัดสินใจออกจากบริษัทที่ทำมา 24 ปี มีคนถามว่ากลัวไหม คำตอบในใจคือ "กลัว แต่วันพรุ่งนี้อาจเป็นวันแรกที่ดีที่สุดในชีวิตก็ได้"',
+    source: 'จาก 《Forever Young》 โดย Bob Dylan แปลโดย Arthur Binard'
+  },
+  // PART 1 — Extra (Virgil Abloh, Wakabayashi, Yamauchi)
+  {
+    part: 'part1',
+    num: '24',
+    tag: 'Fashion Designer',
+    quote: 'ถ้าอย่างนั้น ฉันขอเป็นเด็ก 17 ที่ยังไม่รู้อะไรมากก็ดีกว่า ฉันไม่อยากถูกมาตรฐานของใครมาบอกว่าต้องคิดอะไร',
+    original: 'それならば私は、ナイーブな17歳のままでいるほうがいい。',
+    speaker: 'Virgil Abloh',
+    speakerTh: 'เวอร์จิล อับโลห์',
+    role: 'Fashion Designer · Off-White / Louis Vuitton',
+    desc: 'เวลาตัดสินใจอะไรสักอย่าง อย่าลืมความรู้สึกแรกที่มีตอนเริ่มต้น — ไม่ใช่แค่คนที่มีความสามารถพิเศษเท่านั้นที่ทำสิ่งที่ยิ่งใหญ่ได้ แต่คนที่ยังคงมีหัวใจที่ "ยังไม่รู้อะไรมาก" ต่างหากที่มักสร้างสิ่งที่ไม่มีใครคาดคิด',
+    source: 'จาก 《ダイアローグ》 (アダナプレス) แปลโดย 訓市'
+  },
+  {
+    part: 'part1',
+    num: '25',
+    tag: 'นักแสดงตลก',
+    quote: 'ไม่เคยคิดมาก่อนว่า สิ่งที่ทำให้ตัวเองเจ็บปวดมาตลอด วันหนึ่งอาจกลายเป็นสิ่งที่ช่วยชีวิตใครบางคนได้',
+    original: 'まさか、自分の欠落に苦しんできたことが、誰かを生かすなんて思いもよらなかった。',
+    speaker: 'Masayasu Wakabayashi',
+    speakerTh: 'มาซายาสึ วาคาบาบายาชิ',
+    role: 'นักแสดงตลก / นักเขียน',
+    desc: 'ความรู้สึกที่ว่าตัวเองไม่เหมาะกับโลก ไม่เข้ากับใคร และเจ็บปวดกับมันมานาน — บางทีการที่เราบอกว่าตัวเองพังนั้น คือสิ่งที่ทำให้คนอื่นรู้ว่าตัวเองไม่ได้พังคนเดียว',
+    source: 'จาก 《表参道のセレブ犬とカバーニーの人々》 (文春文庫)'
+  },
+  {
+    part: 'part1',
+    num: '26',
+    tag: 'ช่างทำสวน',
+    quote: 'ตอนที่สวนถูกสร้างขึ้น สิ่งที่เคยเป็นแค่ "ข้างหลัง" หรือ "ส่วนล้น" ก็เริ่มมีความหมายขึ้นมาเองโดยไม่มีใครตั้งใจ',
+    original: '庭がつくられることではじめて「向こう」が、これまで奥や後ろと言われてきた庭の周囲が事後的に見えるようになるという事態だ。',
+    speaker: 'Tomoki Yamauchi',
+    speakerTh: 'โตโมกิ ยามาอุจิ',
+    role: 'ช่างทำสวน (庭師)',
+    desc: 'งานจัดสวนสอนฉันว่าเราไม่ได้สร้างแค่สวน เราสร้างสายสัมพันธ์ระหว่างสวนกับสิ่งที่อยู่รอบ ๆ ด้วย ตอนที่ต้นไม้ยืนอยู่ตรงนั้น มันทำให้สิ่งที่อยู่ไกลออกไปมีตัวตนขึ้นมาทันที',
+    source: 'จาก 《庭のかたちが生まれるとき》 (フィルムアート社)'
+  },
+  // PART 2
+  {
+    part: 'part2',
+    num: 'B-01',
+    tag: 'Best Essayist',
+    quote: 'ตอนที่แสงสะท้อนบนน้ำในห้องอาบน้ำ แล้วทุกอย่างพลันส่องแสงเป็นสีรุ้ง เด็กคนหนึ่งก็รู้ขึ้นมาทันทีว่าตัวเองอยากเป็นอะไรในชีวิต',
+    original: '',
+    speaker: 'Momoko Sakura (さくらももこ)',
+    speakerTh: 'ซากุระ โมโมโกะ',
+    role: 'มังงะกะ / เอสเซอิสต์ (1965–2018)',
+    desc: 'โดย Ryo Asai: ฉันพูดได้เลยว่าซากุระโมโมโกะคือ "เสียงในหัว" ที่ดังที่สุดสำหรับฉัน ฉากที่เธอเห็นน้ำส่องแสงในห้องอาบน้ำแล้วรู้ว่าอยากเป็น "คนที่เขียนเรื่องแบบนี้" — มันทำให้ฉันรู้สึกว่า "อ้อ แบบนี้แหละ"',
+    source: 'เล่าใหม่จาก 《ひとりずもう》 โดย さくらももこ · เล่าโดย 朝井リョウ'
+  },
+  {
+    part: 'part2',
+    num: 'B-02',
+    tag: 'Best Essayist',
+    quote: 'คนที่ผ่านชีวิตที่เจ็บปวดมา สักวันจะรู้สึกถึงความสุขได้หนักแน่นกว่าใคร — แม้แค่ชั่วขณะ และขณะนั้นอาจมาพรุ่งนี้',
+    original: '',
+    speaker: 'Naoki Matayoshi (又吉直樹)',
+    speakerTh: 'มาตายาชิ นาโอกิ',
+    role: 'นักเขียน / นักแสดงตลก',
+    desc: 'เล่าโดย Kohan Ban: หนังสือเล่มที่ทำให้ฉันอยากเขียน — ความรู้สึกที่ว่าคนที่ผ่านความเจ็บปวดมาจะได้รับรู้ความสุขอย่างลึกซึ้งกว่า',
+    source: 'เล่าใหม่จาก 《東京百景》 โดย 又吉直樹'
+  },
+  {
+    part: 'part2',
+    num: 'B-03',
+    tag: 'Best Essayist',
+    quote: 'เราอาจฝึกฝนการ "ถูกรัก" จนชำนาญ แต่ลืมฝึกการ "รัก" ใครสักคนไปแล้ว',
+    original: '',
+    speaker: 'Saeko Himuro (氷室冴子)',
+    speakerTh: 'ฮิมุโระ ซาเอโกะ',
+    role: 'นักเขียน (1957–2008)',
+    desc: 'เล่าโดย Sonoko Machida: ฮิมุโระเขียนถึงผู้หญิงที่กล้าหาญในแบบที่ฉันอยากเป็น — การรักต้องใช้ความกล้า ประโยคนี้ทำให้นึกถึงตัวเองในวัยรุ่น ที่รอให้คนมารักตลอด แต่ไม่เคยถามว่า "ตัวเองรักแบบไหนกันแน่?"',
+    source: 'เล่าใหม่จาก 《新版 いっぽしの女》 โดย 氷室冴子 · เล่าโดย 町田そのこ'
+  },
+  // PART 3
+  {
+    part: 'part3',
+    num: 'L-01',
+    tag: 'ชีวิตประจำวัน',
+    quote: 'ชีวิตประจำวันคือแกนกลางของทุกอย่าง วัฒนธรรมที่แท้จริงซ่อนอยู่ในนั้น ไม่ใช่ในพิพิธภัณฑ์',
+    original: '日々の生活こそすべてのものの中心なのであります。',
+    speaker: 'Soetsu Yanagi (柳宗悦)',
+    speakerTh: 'ยานางิ โซเอตสุ',
+    role: 'นักคิด · ผู้ก่อตั้งขบวนการ Mingei',
+    desc: 'คุณค่าที่แท้จริงของคนปรากฏออกมาในชีวิตทุกวัน ไม่ใช่ในวันพิเศษ',
+    source: 'คัดเลือกโดย 盛岡義之 (Morioka Yoshiyuki)'
+  },
+  {
+    part: 'part3',
+    num: 'L-02',
+    tag: 'ชีวิตประจำวัน',
+    quote: 'ถ้าโลกนี้หนีไม่ได้ ก็หาทางทำให้มันน่าอยู่ขึ้นดีกว่า ทีละนิดก็ยังดี',
+    original: '住みにくい所をどれほど住みよくするか——',
+    speaker: 'Natsume Soseki (夏目漱石)',
+    speakerTh: 'นัตสึเมะ โซเซกิ',
+    role: 'นักเขียน',
+    desc: '',
+    source: 'คัดเลือกโดย 盛岡義之'
+  },
+  {
+    part: 'part3',
+    num: 'L-03',
+    tag: 'ชีวิตประจำวัน',
+    quote: 'โยนของที่ไม่ใช้ทิ้งไป เก็บแค่สิ่งที่ต้องการจริง ๆ ชีวิตจะเบาขึ้นเองทันที',
+    original: 'がらくたは投げ捨てて、ただ必要なものだけを積み込んで——',
+    speaker: 'Jerome K. Jerome',
+    speakerTh: 'เจอโรม เค. เจอโรม',
+    role: 'นักเขียน',
+    desc: '',
+    source: 'จาก 《ボートの三人男》 · แนะนำโดย 中村好文 สถาปนิก'
+  },
+  {
+    part: 'part3',
+    num: 'L-04',
+    tag: 'ชีวิตประจำวัน',
+    quote: 'เลือกสักอย่างให้ได้ — แต่ต้องเลือกด้วยความรับผิดชอบ ไม่ใช่เพราะมันราคาถูกหรือเพราะคนอื่นก็มี',
+    original: '責任をもって、ひとつを選ぶ。',
+    speaker: 'Kuniko Mukoda (向田邦子)',
+    speakerTh: 'มุโกดะ คุนิโกะ',
+    role: 'นักเขียนบท / เอสเซอิสต์',
+    desc: '',
+    source: 'คัดเลือกโดย 盛岡義之'
+  },
+  {
+    part: 'part3',
+    num: 'K-01',
+    tag: 'งานครัว',
+    quote: 'ทุกครั้งที่เราบอกใครว่า "กินนี่ก่อนสิ" มันคือการบอกว่า "อยู่ต่อไปนะ ฉันอยากให้ยังอยู่ด้วยกัน"',
+    original: '誰かに「これ食べて」って言うのって、その人に「生きて」って言うのと同じことだと私、思うんだよね。',
+    speaker: 'Nahomi Edamoto (枝元なほみ)',
+    speakerTh: 'เอดาโมโตะ นาโฮมิ',
+    role: 'นักวิจัยด้านอาหาร',
+    desc: '',
+    source: 'คัดเลือกโดย 鈴木ケイ (Suzuki Kei)'
+  },
+  {
+    part: 'part3',
+    num: 'K-02',
+    tag: 'งานครัว',
+    quote: 'ฟังเสียงในครัวให้ดี เสียงกระทะ เสียงน้ำต้ม เสียงมีดสับ — มันคือดนตรีที่ดีที่สุดชนิดหนึ่ง',
+    original: '厨房の音を美しくしろ、台所の音をかわいがれ。',
+    speaker: 'Fumi Shinada (辛田 文)',
+    speakerTh: 'ชินาดะ ฟุมิ',
+    role: 'นักเขียนเรียงความ',
+    desc: '',
+    source: 'คัดเลือกโดย 鈴木ケイ'
+  },
+  {
+    part: 'part3',
+    num: 'K-03',
+    tag: 'งานครัว',
+    quote: 'การทำอาหารคือการตัดสินใจอย่างกล้าหาญและลงมือทำทันที ซ้ำ ๆ กัน ทุกขั้นตอน',
+    original: '料理とは「果敢な決断と実行」の連続である。',
+    speaker: 'Yoko Kirishima (桐島洋子)',
+    speakerTh: 'คิริชิมะ โยโกะ',
+    role: 'นักเขียน',
+    desc: '',
+    source: 'คัดเลือกโดย 鈴木ケイ'
+  },
+  {
+    part: 'part3',
+    num: 'K-04',
+    tag: 'งานครัว',
+    quote: 'ใช้ทุกประสาทสัมผัสที่มี ดม ฟัง สัมผัส และชิม ชิมบ่อย ๆ เพราะทุกครั้งที่ชิมคือการเรียนรู้อะไรใหม่',
+    original: '五感のすべてを使って料理を楽しみましょう。そして味見をしましょう。',
+    speaker: 'Alice Waters',
+    speakerTh: 'อลิซ วอเตอร์ส',
+    role: 'ผู้ก่อตั้งร้าน Chez Panisse',
+    desc: '',
+    source: 'คัดเลือกโดย 鈴木ケイ'
+  },
+  {
+    part: 'part3',
+    num: 'K-05',
+    tag: 'งานครัว',
+    quote: 'ผักที่เหี่ยวแห้งได้ตามธรรมชาติ คือผักที่เคยมีชีวิตอย่างเต็มที่ ก่อนจะมาถึงมือเรา',
+    original: 'よく枯れる野菜は、よく生きている。',
+    speaker: 'Satoru Uchida (内田 悟)',
+    speakerTh: 'อุจิดะ ซาโตรุ',
+    role: 'เจ้าของร้านผักสด Tsukiji Mikuriya',
+    desc: '',
+    source: 'คัดเลือกโดย 鈴木ケイ'
+  },
+  {
+    part: 'part3',
+    num: 'K-06',
+    tag: 'งานครัว',
+    quote: 'ทุกครั้งที่ต้องการเผชิญกับบางอย่างเล็ก ๆ ในใจ ฉันมักวิ่งเข้าครัวก่อนเสมอ เพราะมือที่ยุ่งในครัวทำให้หัวใจค่อย ๆ สงบลงได้',
+    original: 'わたしが小さなものと向きあおうというとき。もうもう、決まって、台所へ飛びこむ。',
+    speaker: 'Fumiko Yamamoto (山本ふみこ)',
+    speakerTh: 'ยามาโมโตะ ฟุมิโกะ',
+    role: 'นักเขียนเรียงความ',
+    desc: '',
+    source: 'คัดเลือกโดย 鈴木ケイ'
+  },
+  {
+    part: 'part3',
+    num: 'H-01',
+    tag: 'บ้าน',
+    quote: 'บ้านไม่ใช่แค่ที่พัก มันคือที่เดียวที่เราได้หยุดเป็นตัวเองโดยไม่ต้องอธิบายอะไรให้ใคร ในโลกที่ต้องแข็งแกร่งตลอดเวลา',
+    original: '家庭というのは、世知辛い世の中で生きつづける人たちが疲れをいやす場所だと思う。',
+    speaker: 'Sadako Sawamura (沢村貞子)',
+    speakerTh: 'ซาวามุระ ซาดาโกะ',
+    role: 'นักแสดง / นักเขียน',
+    desc: '',
+    source: 'คัดเลือกโดย 盛岡義之'
+  },
+  {
+    part: 'part3',
+    num: 'H-02',
+    tag: 'บ้าน',
+    quote: 'สิ่งที่หาได้ง่ายในทุกที่ทุกเวลา — นั่นแหละที่มักถูกมองข้ามมากที่สุด ทั้งที่จริงมันสำคัญที่สุดด้วย',
+    original: 'いつどこにでもあるからそういうのか。いつどこにでもあるものほど貴重なものはないのである。',
+    speaker: 'Tsutomu Minakami (水上 勉)',
+    speakerTh: 'มินากามิ ทสึโตมุ',
+    role: 'นักเขียน',
+    desc: '',
+    source: 'คัดเลือกโดย 盛岡義之'
+  }
+];
+
+let currentFilter = 'all';
+
+function renderCards(filter) {
+  const grid = document.getElementById('grid');
+  const filtered = filter === 'all' ? quotes : quotes.filter(q => q.part === filter);
+  document.getElementById('countLabel').textContent = `แสดง ${filtered.length} คำ`;
+
+  grid.innerHTML = filtered.map((q, i) => `
+    <div class="card" onclick="openModal(${quotes.indexOf(q)})" style="animation-delay:${i*0.03}s">
+      <div class="card-number">No. ${q.num}</div>
+      <div class="card-tag">${q.tag}</div>
+      <div class="card-quote">
+        <span class="card-quote-mark">"</span>${q.quote}
+      </div>
+      <div class="card-divider"></div>
+      <div class="card-speaker">
+        <div class="speaker-name">${q.speakerTh || q.speaker}</div>
+        <div class="speaker-role">${q.role}</div>
+      </div>
+      <div class="expand-hint">อ่านเพิ่มเติม →</div>
+    </div>
+  `).join('');
+}
+
+function filterCards(filter, btn) {
+  currentFilter = filter;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderCards(filter);
+}
+
+function openModal(idx) {
+  const q = quotes[idx];
+  document.getElementById('m-number').textContent = `No. ${q.num} · ${q.tag}`;
+  document.getElementById('m-quote').textContent = q.quote;
+  const jpEl = document.getElementById('m-jp');
+  if (q.original) {
+    jpEl.textContent = q.original;
+    jpEl.style.display = 'block';
+  } else {
+    jpEl.style.display = 'none';
+  }
+  document.getElementById('m-desc').textContent = q.desc;
+  document.getElementById('m-name').textContent = `${q.speakerTh || q.speaker}`;
+  document.getElementById('m-role').textContent = q.role;
+  document.getElementById('m-original').textContent = '';
+  document.getElementById('m-source').textContent = q.source;
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal(e) {
+  if (!e || e.target === document.getElementById('modalOverlay') || e.target.closest('.modal-close')) {
+    document.getElementById('modalOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+window.addEventListener('scroll', () => {
+  document.getElementById('scrollTop').classList.toggle('visible', window.scrollY > 400);
+});
+
+renderCards('all');
+</script>
+</body>
+</html>
