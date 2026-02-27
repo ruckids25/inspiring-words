@@ -24,6 +24,28 @@
     min-height: 100vh;
   }
 
+  /* COVER IMAGE */
+  .cover-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 40px 40px;
+    background: var(--cream);
+    border-bottom: 1px solid var(--soft);
+  }
+
+  .cover-image {
+    max-width: 340px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(26,21,16,0.18);
+    display: block;
+  }
+
+  @media (max-width: 600px) {
+    .cover-section { padding: 40px 28px 30px; }
+    .cover-image { max-width: 260px; }
+  }
+
   /* HEADER */
   .header {
     text-align: center;
@@ -482,8 +504,12 @@
 </head>
 <body>
 
+<div class="cover-section">
+  <img src="cover.jpg" alt="&Premium — Inspiring Words Special Issue" class="cover-image">
+</div>
+
 <div class="header">
-  <div class="header-label">® Premium Special Issue</div>
+  <div class="header-label">&Premium Special Issue</div>
   <h1>INSPIRING<br><em>WORDS</em></h1>
   <div class="header-sub">明日を生きるための言葉 · คำที่ช่วยให้อยู่กับวันพรุ่งนี้ได้</div>
   <div class="header-line"></div>
@@ -496,7 +522,7 @@
     <div class="intro-body">
       <p>ลองนึกดูว่าในหนึ่งวัน เราผ่านคำกี่คำ บนฟีด บนหน้าจอ บนป้ายรถเมล์ มันเยอะมากจนสมองเริ่มกรองออกโดยอัตโนมัติ และนั่นแหละที่น่ากลัว เพราะบางครั้งคำที่ดีก็ถูกกรองออกไปด้วย</p>
       <p>มีอยู่ช่วงหนึ่งที่เราอยากได้ยินแค่ประโยคเดียว ประโยคที่ตรงไปที่หัวใจพอดี ไม่ต้องอธิบายมาก ไม่ต้องมีหัวข้อ แค่รู้สึกว่า "ใช่ — แบบนี้แหละที่ฉันรู้สึกอยู่"</p>
-      <p>®Premium ฉบับนี้จึงเดินไปหาคนที่ทำงานอยู่กับคำ กับภาพ กับอาหาร กับร่างกายมนุษย์ แล้วถามว่า "มีประโยคอะไรบ้างที่ยังติดอยู่ในหัวคุณ?" คำตอบทั้ง 23 ชุดที่ได้มา ไม่มีชุดไหนเหมือนกัน แต่ทุกชุดพูดถึงสิ่งเดียวกัน — ว่าชีวิตนั้นมีค่าพอที่จะอยู่กับมันต่อไป</p>
+      <p>&Premium ฉบับนี้จึงเดินไปหาคนที่ทำงานอยู่กับคำ กับภาพ กับอาหาร กับร่างกายมนุษย์ แล้วถามว่า "มีประโยคอะไรบ้างที่ยังติดอยู่ในหัวคุณ?" คำตอบทั้ง 23 ชุดที่ได้มา ไม่มีชุดไหนเหมือนกัน แต่ทุกชุดพูดถึงสิ่งเดียวกัน — ว่าชีวิตนั้นมีค่าพอที่จะอยู่กับมันต่อไป</p>
     </div>
   </div>
 </div>
